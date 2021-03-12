@@ -75,8 +75,24 @@ $(
             }
         );
 
+        //Azione alla pressione dei tasti freccia
+        $(document).keydown(
+            function(e) {
+            if (e.which == 37) { 
+                prevImage();
+                prevBullet();
+            }
+        }
+        );
 
-
+        $(document).keydown(
+            function(e) {
+            if (e.which == 39) { 
+                nextImage();
+                nextBullet();
+            }
+        }
+        );
 
     }
 );
