@@ -60,12 +60,20 @@ $(
             } 
         );
 
-        //azioni bullet
-
-
-
-
-
+        //funzioni bullet/img
+        //se clicco su un bullet ad esso viene applicata la classe active 
+        // al bottone viene attribuita una posizione nella lista alla quale corrisponde l'immagine alla quale viene data active.
+        var bullet = $('.nav i.fas.fa-circle');
+        bullet.click(
+            function () {
+                bullet.removeClass('active');
+                var img = $('.images img');
+                var imgIndex = bullet.index($(this));
+                $(this).addClass('active');
+                img.removeClass('active');
+                img.eq(imgIndex).addClass('active');                  
+            }
+        );
 
 
 
